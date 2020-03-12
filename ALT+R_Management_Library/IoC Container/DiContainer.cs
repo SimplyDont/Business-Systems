@@ -20,7 +20,7 @@ namespace ALT_R_Management_Library.IoC_Container
             get { return diContainer; }
         }
 
-        public static object GetService(Type ServiceType)
+        private static object GetService(Type ServiceType)
         {
             var instance_ = services_.SingleOrDefault(i => i.ServiceType == ServiceType);
             if (instance_.Implementation != null)
@@ -40,7 +40,7 @@ namespace ALT_R_Management_Library.IoC_Container
             return implementation;
         }
 
-        public T GetService<T>()
+        public static T GetService<T>()
         {
             return (T)GetService(typeof(T));
         }
