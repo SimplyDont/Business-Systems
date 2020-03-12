@@ -20,19 +20,30 @@ namespace ALT_R_Management_Library.IoC_Container
             get { return diContainer; }
         }
 
-        //public static T GetService<T>()
-        //{
-        //    var instance_ = services_.SingleOrDefault(i => i.ServiceType == typeof(T));
-        //    if (instance_.ServiceLifetime == LifeTime.Transient)
-        //    {
-        //        return (T)Activator.CreateInstance(instance_.ServiceType);
-        //    }
-        //    else
-        //    {
-        //         instance_.Implementation;
-        //    }
-        //}
-        
+        public static object GetService(Type ServiceType)
+        {
+            var instance_ = services_.SingleOrDefault(i => i.ServiceType == ServiceType);
+            if (instance_.Implementation != null)
+            {
+                return instance_.Implementation;
+            }
+
+            var actualType = instance_.Implementation.GetType() ?? instance_.ServiceType;
+            var constructInfo = actualType.GetConstructors().First();
+            var parameters=constructInfo.GetParameters().Select(x=>GetService(x.ParameterType)).ToArray();
+            var implementation = Activator.CreateInstance(actualType,parameters);
+            if (instance_.ServiceLifetime == LifeTime.Singleton)
+            {
+                return instance_.Implementation = implementation;
+            }
+
+            return implementation;
+        }
+
+        public T GetService<T>()
+        {
+            return (T)GetService(typeof(T));
+        }
     }
 
     public class DiCollection
