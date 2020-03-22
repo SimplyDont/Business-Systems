@@ -1,7 +1,7 @@
 ﻿CREATE TABLE [dbo].[VisitorsTbl]
 (
 	[VisitorsPassNumber] INT NOT NULL PRIMARY KEY, 
-	[PrisonerID] int not null FOREIGN KEY (PrisonerID) references PrisonerTbl(PrisonerID), 
+	[PrisonerID] int not null FOREIGN KEY (PrisonerID) references PrisonerTbl([PrisonerID]), 
 	[VisitorsFirstName] nvarchar(max) not null, 
 	[VisitorLastName] nvarchar(max) not null, 
 	[Relationship] nvarchar(max) not null, 

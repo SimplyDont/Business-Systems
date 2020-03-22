@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[PrisonerTbl]
 (
-	[PrisonerId] INT NOT NULL PRIMARY KEY, 
+	[PrisonerID] INT NOT NULL PRIMARY KEY, 
 	[PrisonerFirstName] nvarchar(150) not null, 
 	[PrisonerLastName] nvarchar (150) not null, 
 	[Gender] nvarchar(7) not null, 

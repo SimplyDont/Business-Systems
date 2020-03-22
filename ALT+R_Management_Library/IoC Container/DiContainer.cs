@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALT_R_Management_Library.IoC_Container
+namespace ALT_R_WebApi.IoC_Container
 {
-    public class DiContainer
+    internal class DiContainer
     {
         private static IList<ServiceDescriptor> services_ = new List<ServiceDescriptor>();
         private static DiContainer diContainer = new DiContainer();
@@ -46,7 +46,7 @@ namespace ALT_R_Management_Library.IoC_Container
         }
     }
 
-    public class DiCollection
+    internal class DiCollection
     {
         private static IList<ServiceDescriptor> services_ = new List<ServiceDescriptor>();
         private static DiCollection diCollection = new DiCollection();
@@ -75,7 +75,7 @@ namespace ALT_R_Management_Library.IoC_Container
         }
     }
 
-    public  class ServiceDescriptor
+    internal  class ServiceDescriptor
     {
         
 
@@ -90,7 +90,7 @@ namespace ALT_R_Management_Library.IoC_Container
         }
     }
 
-    public enum LifeTime
+    internal enum LifeTime
     {
         Singleton,Transient
     }

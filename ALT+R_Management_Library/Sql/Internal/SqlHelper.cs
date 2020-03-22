@@ -8,9 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ALT_R_Management_Library.Sql.Internal
+namespace ALT_R_WebApi.Sql.Internal
 {
-    internal class SqlHelper
+    public class SqlHelper
     {
         private static string GetConnectionString(string name)
         {
@@ -18,23 +18,34 @@ namespace ALT_R_Management_Library.Sql.Internal
         }
 
 
-        public static async Task<IList<T>> GetData<T>(string procedureName,string configName,params object[] parameters)
+        public static IList<T> GetData<T,U>(string procedureName,string configName, U parameters)
         {
             var connectionStr=GetConnectionString(configName);
             using (IDbConnection db=new SqlConnection(connectionStr))
             {
-                var output = await db.QueryAsync<T>(procedureName, parameters,commandType:CommandType.StoredProcedure);
+                var output = db.Query<T>(procedureName, parameters,commandType:CommandType.StoredProcedure);
 
                 return output.ToList();
             }
         }
 
-        public static async void SaveData(string procedureName, string configName, params object[] parameters)
+        public static IList<T> GetData<T>(string procedureName, string configName)
         {
             var connectionStr = GetConnectionString(configName);
             using (IDbConnection db = new SqlConnection(connectionStr))
             {
-                var output = await db.ExecuteAsync(procedureName, parameters, commandType: CommandType.StoredProcedure);
+                var output = db.Query<T>(procedureName, commandType: CommandType.StoredProcedure);
+
+                return output.ToList();
+            }
+        }
+
+        public static void SaveData<U>(string procedureName, string configName, U parameters)
+        {
+            var connectionStr = GetConnectionString(configName);
+            using (IDbConnection db = new SqlConnection(connectionStr))
+            {
+                var output = db.Execute(procedureName, parameters, commandType: CommandType.StoredProcedure);
 
             }
         }

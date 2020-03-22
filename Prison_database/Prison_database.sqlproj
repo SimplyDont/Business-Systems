@@ -68,8 +68,15 @@
     <Build Include="dbo\Tables\VisitorsTbl.sql" />
     <Build Include="dbo\Tables\InspectorateTbl.sql" />
     <Build Include="dbo\Tables\AdministratorTbl.sql" />
+    <Build Include="dbo\Stored Procedues\GetAdmin.sql" />
+    <Build Include="dbo\Stored Procedues\InsertAdmin.sql" />
+    <Build Include="dbo\Stored Procedues\GetAllAdmins.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Published Location\Prison_database.publish.xml" />
+    <None Include="Prison_database.publish.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="Prison_database.refactorlog" />
   </ItemGroup>
 </Project>
