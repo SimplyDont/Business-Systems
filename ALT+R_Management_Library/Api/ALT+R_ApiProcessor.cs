@@ -1,5 +1,6 @@
 ﻿using ALT_R_Management_Library.Models.Admin;
 using ALT_R_Management_Library.Models.Auth;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,28 +92,30 @@ namespace ALT_R_Management_Library.Api
 
         }
 
-        public async Task<HttpStatusCode> InsertAdmin(string firstname,string lastname,string gender,string email,string role,string username, string password,byte[] image)
+        public async Task<string> InsertAdmin(string firstname, string lastname, string gender, string role, string username, string email, string password, byte[] image)
         {
-            var data = new AdministratorModel() {
-                FirstName = firstname,
-                LastName = lastname,
-                Gender = gender,
-                Role = role,
-                Username = username,
-                Password = Encoding.ASCII.GetBytes(password),
-                Image = image, AdminID = 0, EmailAddress = email
-            };
-            using (HttpResponseMessage response = await ALT_R_ApiHelper.ApiClient.PostAsync<AdministratorModel>("http://localhost:60079/api/admin/insertadmin",data,new JsonMediaTypeFormatter()))
+
+
+            using (HttpRequestMessage request = new HttpRequestMessage())
             {
-                if (response.IsSuccessStatusCode)
+                request.Method = HttpMethod.Post;
+                request.RequestUri = new Uri($"http://localhost:60079/api/admin/ina/{firstname}/{lastname}/{gender}/{role}/{username}/{email}/{password}");
+                request.Headers.Add("Authorization", $"bearer {AuthToken}");
+
+                using (HttpResponseMessage response = await ALT_R_ApiHelper.ApiClient.PostAsync(request.RequestUri,new ByteArrayContent(image),new BsonMediaTypeFormatter()))
                 {
-                    return response.StatusCode;
-                }
-                else
-                {
-                    throw new Exception(response.ReasonPhrase);
+                    if (response.IsSuccessStatusCode)
+                    {
+                        return "Sucess";
+                    }
+                    else
+                    {
+                        throw new Exception(response.ReasonPhrase);
+                    }
                 }
             }
+
+           
 
         }
     }

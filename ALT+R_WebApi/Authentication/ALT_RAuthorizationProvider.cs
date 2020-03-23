@@ -15,7 +15,8 @@ namespace ALT_R_WebApi.Authentication
 {
     public class ALT_RAuthorizationProvider:OAuthAuthorizationServerProvider
     {
-        
+        SqlDataAcess sqlDataAcess = new SqlDataAcess();
+
         public override async Task ValidateClientAuthentication(OAuthValidateClientAuthenticationContext context)
         {
             
@@ -23,22 +24,9 @@ namespace ALT_R_WebApi.Authentication
 
             
         }
-        public override Task GrantRefreshToken(OAuthGrantRefreshTokenContext context)
-        {
 
-            // Change authentication ticket for refresh token requests  
-            var newIdentity = new ClaimsIdentity(context.Ticket.Identity);
-            newIdentity.AddClaim(new Claim("newClaim", "newValue"));
-
-            var newTicket = new AuthenticationTicket(newIdentity, context.Ticket.Properties);
-            context.Validated(newTicket);
-
-            return Task.FromResult<object>(null);
-
-        }
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
-            SqlDataAcess sqlDataAcess = new SqlDataAcess();
             try
             {
                 var identity = new ClaimsIdentity(context.Options.AuthenticationType);

@@ -18,9 +18,10 @@ namespace ALT_R_Management_Library.Models.Admin
         byte[] Password { get; set; }
         byte[] Image { get; set; }
 
+        byte[] GetImage(string email);
         IAdministrator GetAdministrator(string emailaddress, string password);
         IEnumerable<IAdministrator> GetAllAdministrators();
-        void InsertAdministrator(IAdministrator administrator);
+        void InsertAdministrator(string firstname, string lastname, string gender, string role, string username, string email, string password, byte[] image);
         void DeleteAdministrator(int adminID);
         void DeleteAdministrator(string emailaddress,string password);
         void UpdateAdministrator(IAdministrator administrator);

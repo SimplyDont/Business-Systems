@@ -11,6 +11,7 @@ using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -55,19 +56,27 @@ namespace ALT_R_DB_Manager
         }
         private async void registerUserBtn_Click(object sender, EventArgs e)
         {
-            try
+            if (CheckForRequired())
             {
-                await apiProcessor.InsertAdmin(firstnameTextbox.Text, lastnameTextbox.Text,
-                                    (string)selectSex.SelectedItem, emailTextbox.Text, (string)selectRole.SelectedItem,
-                                    usernameTextbox.Text, confirmpasswordTextbox.Text, GetByteFromImage(adminPageRegisterPicture.Image));
+                try
+                {
+                    var status = await apiProcessor.InsertAdmin(firstnameTextbox.Text, lastnameTextbox.Text,
+                                         (string)selectSex.SelectedItem, (string)selectRole.SelectedItem,
+                                         usernameTextbox.Text, emailTextbox.Text, confirmpasswordTextbox.Text, GetByteFromImage(adminPageRegisterPicture.Image));
+                    MaterialMessageBox.Show(status.ToString());
+                }
+                catch (Exception ex)
+                {
+
+                    MaterialMessageBox.Show(ex.Message);
+                }
+            }
+            else
+            {
+                MaterialMessageBox.Show("Check To See If All Required Controls Are Verified");
 
             }
-            catch (Exception ex)
-            {
 
-                MaterialMessageBox.Show(ex.Message);
-            }
-                
             //foreach(Control i in registerPageLoginPanel.Controls)
             //{
             //    i.Invalidate(i.Region);
@@ -75,12 +84,33 @@ namespace ALT_R_DB_Manager
             Refresh();
         }
 
+        private bool CheckForRequired()
+        {
+            var result = false;
+            for (int i = 0; i < materialCard1.Controls.Count; i++)
+            {
+                if (materialCard1.Controls[i].GetType() == typeof(MaterialCheckbox))
+                {
+                    result= true;
+                }
+                else
+                {
+                    result= false;
+                }
+            }
+
+            return result;
+        }
+
         private byte[] GetByteFromImage(Image image)
         {
-            MemoryStream ms = new MemoryStream();
-            var bmp=new Bitmap(image);
-            bmp.Save(ms, ImageFormat.Jpeg);
-            return ms.ToArray();
+            using (MemoryStream ms = new MemoryStream())
+            {
+                var bmp = new Bitmap(image);
+                bmp.Save(ms, ImageFormat.Jpeg);
+                return ms.ToArray();
+            }
+            
         }
 
         private void loadImageBtn_Click(object sender, EventArgs e)
@@ -167,7 +197,7 @@ namespace ALT_R_DB_Manager
 
         private void passwordTextbox_TextChanged(object sender, EventArgs e)
         {
-            if (passwordTextbox.TextLength > 0 &&passwordTextbox.Text==confirmpasswordTextbox.Text)
+            if (passwordTextbox.TextLength > 0)
             {
                 materialCheckbox6.Checked = true;
             }
@@ -217,6 +247,16 @@ namespace ALT_R_DB_Manager
             }
         }
 
-       
+        private void signOutBtn_Click(object sender, EventArgs e)
+        {
+            Thread thread = new Thread(new ThreadStart(SignOutNow));
+            thread.Start();
+            this.Close();
+        }
+
+        private void SignOutNow()
+        {
+            Application.Run(new SignInFormv2());
+        }
     }
 }

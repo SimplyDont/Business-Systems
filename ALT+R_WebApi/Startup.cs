@@ -24,7 +24,6 @@ namespace ALT_R_WebApi
                 AllowInsecureHttp=true,
                 TokenEndpointPath=new PathString("/token"),
                 Provider=_provider,
-                RefreshTokenProvider=new Authentication.ALT_RRefreshTokenProvider()
             };
             app.UseOAuthAuthorizationServer(_options);
             app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());

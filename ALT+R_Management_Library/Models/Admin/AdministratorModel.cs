@@ -44,14 +44,19 @@ namespace ALT_R_Management_Library.Models.Admin
 
         }
 
-        public void InsertAdministrator(IAdministrator administrator)
+        public void InsertAdministrator(string firstname, string lastname, string gender, string role, string username, string email, string password, byte[] image)
         {
-            sqlData.InsertAdmin(administrator);
+            sqlData.InsertAdmin(firstname, lastname, gender, role, username, email, password, image);
         }
 
         public void UpdateAdministrator(IAdministrator administrator)
         {
             throw new NotImplementedException();
+        }
+
+        public byte[] GetImage(string email)
+        {
+            return sqlData.GetImage(email);
         }
     }
 }

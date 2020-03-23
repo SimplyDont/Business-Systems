@@ -22,9 +22,11 @@ namespace ALT_R_Management_Library.Api
             ApiClient = new HttpClient();
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/bson"));
+
         }
 
-        
-       
+
+
     }
 }

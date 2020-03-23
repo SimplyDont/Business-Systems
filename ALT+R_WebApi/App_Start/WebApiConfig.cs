@@ -16,6 +16,8 @@ namespace ALT_R_WebApi
             // Web API configuration and services
 
             // Web API routes
+            config.Formatters.Add(new System.Net.Http.Formatting.BsonMediaTypeFormatter());
+            config.Formatters.Add(new System.Net.Http.Formatting.JsonMediaTypeFormatter());
             config.MapHttpAttributeRoutes();
 
             config.Routes.MapHttpRoute(

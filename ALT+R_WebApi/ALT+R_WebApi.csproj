@@ -129,7 +129,6 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Authentication\ALT_RAuthorizationAttribute.cs" />
     <Compile Include="Authentication\ALT_RAuthorizationProvider.cs" />
-    <Compile Include="Authentication\ALT_RRefreshTokenProvider.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

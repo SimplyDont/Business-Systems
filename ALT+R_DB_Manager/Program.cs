@@ -16,7 +16,8 @@ namespace ALT_R_DB_Manager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignInForm());
+            ALT_R_Management_Library.Api.ALT_R_ApiHelper.IntializeClient();
+            Application.Run(new SignInFormv2());
         }
     }
 }

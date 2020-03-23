@@ -24,18 +24,28 @@ namespace ALT_R_WebApi.Models
             return SqlHelper.GetData<T>("GetAllAdmins", "TestCon").ToList();
         }
 
-        public void InsertAdmin(IAdministrator admin)
+        public byte[] GetImage(string email)
         {
             var p = new
             {
-                firstname=admin.FirstName,
-                lastname=admin.LastName,
-                gender=admin.Gender,
-                role=admin.Role,
-                username=admin.Username,
-                email=admin.EmailAddress,
-                password=Encoding.ASCII.GetString(admin.Password),
-                image=admin.Image
+                email = email
+            };
+            return SqlHelper.GetData<byte[],dynamic>("GetImageByEmail", "TestCon",p).FirstOrDefault();
+
+        }
+
+        public void InsertAdmin(string firstname,string lastname, string gender, string role,string username,string email,string password,byte[] image)
+        {
+            var p = new
+            {
+                firstname= firstname,
+                lastname=lastname,
+                gender=gender,
+                role=role,
+                username=username,
+                email=email,
+                password=password,
+                image = image
             };
              SqlHelper.SaveData<dynamic>("InsertAdmin", "TestCon", p);
         }

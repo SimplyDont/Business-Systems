@@ -71,6 +71,7 @@
     <Build Include="dbo\Stored Procedues\GetAdmin.sql" />
     <Build Include="dbo\Stored Procedues\InsertAdmin.sql" />
     <Build Include="dbo\Stored Procedues\GetAllAdmins.sql" />
+    <Build Include="dbo\Stored Procedues\GetImageByEmail.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Published Location\Prison_database.publish.xml" />

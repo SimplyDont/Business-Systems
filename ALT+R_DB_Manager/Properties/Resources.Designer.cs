@@ -73,6 +73,16 @@ namespace ALT_R_DB_Manager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap involve_employees {
+            get {
+                object obj = ResourceManager.GetObject("involve-employees", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Material_Backgrounds_15_1366_x_768 {
             get {
                 object obj = ResourceManager.GetObject("Material-Backgrounds-15-1366-x-768", resourceCulture);
@@ -86,6 +96,16 @@ namespace ALT_R_DB_Manager.Properties {
         internal static System.Drawing.Bitmap office3 {
             get {
                 object obj = ResourceManager.GetObject("office3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap welcome_employees {
+            get {
+                object obj = ResourceManager.GetObject("welcome-employees", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

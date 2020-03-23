@@ -40,13 +40,24 @@ namespace ALT_R_WebApi.Controllers
             return administrator.GetAdministrator(email,password);
         }
 
-        // POST: api/Admin
-        [ALT_RAuthorization(Roles = "Database Manager")]
-        [Route("insertadmin")]
-        [HttpPost]
-        public void InsertAdmin([FromBody] IAdministrator administrator)
+        [AllowAnonymous]
+        [HttpGet]
+        [Route("gimg/{email}")]
+
+        public byte[] GetByEmail(string email)
         {
-            administrator.InsertAdministrator(administrator);
+            return administrator.GetImage(email);
+        }
+
+        // POST: api/Admin
+        [HttpPost]
+        [ALT_RAuthorization(Roles = "Database Manager")]
+        [Route("ina/{firstname}/{lastname}/{gender}/{role}/{username}/{email}/{password}")]
+        public async void InsertAdmin(string firstname, string lastname, string gender, string role, string username, string email, string password)
+        {
+            var data=await Request.Content.ReadAsByteArrayAsync();
+            administrator.InsertAdministrator(firstname, lastname, gender, role, username, email, password, (byte[])data);
+            //administrator.InsertAdministrator(firstname, lastname, gender, role, username, email, password, Convert.FromBase64String(image));
         }
 
         // PUT: api/Admin/5
@@ -55,9 +66,10 @@ namespace ALT_R_WebApi.Controllers
         }
 
         // DELETE: api/Admin/5
+        [HttpDelete]
+
         [ALT_RAuthorization(Roles = "Database Manager")]
         [Route("deleteadmin")]
-        [HttpDelete]
         public void Delete()
         {
             var _email = HttpContext.Current.Request.Form["email"];

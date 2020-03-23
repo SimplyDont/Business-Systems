@@ -32,6 +32,15 @@
             this.adminPage = new System.Windows.Forms.TabPage();
             this.adminPageTabControl = new MaterialSkin.Controls.MaterialTabControl();
             this.registerPage = new System.Windows.Forms.TabPage();
+            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
+            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialCheckbox7 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialCheckbox6 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialCheckbox5 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
+            this.materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
             this.registerPageLoginPanel = new System.Windows.Forms.Panel();
             this.showpasswordCheckBox = new MaterialSkin.Controls.MaterialCheckbox();
             this.registerUserBtn = new MaterialSkin.Controls.MaterialButton();
@@ -44,41 +53,39 @@
             this.usernameTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.emailTextbox = new MaterialSkin.Controls.MaterialTextBox();
             this.firstnameTextbox = new MaterialSkin.Controls.MaterialTextBox();
-            this.viewPage = new System.Windows.Forms.TabPage();
-            this.adminPageTabSelector = new MaterialSkin.Controls.MaterialTabSelector();
-            this.prisonPage = new System.Windows.Forms.TabPage();
-            this.prisonerPage = new System.Windows.Forms.TabPage();
-            this.visitorPage = new System.Windows.Forms.TabPage();
-            this.materialCard1 = new MaterialSkin.Controls.MaterialCard();
-            this.materialCheckbox1 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox2 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox3 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox4 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox5 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox6 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialCheckbox7 = new MaterialSkin.Controls.MaterialCheckbox();
-            this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             this.registerImagepictureBox = new System.Windows.Forms.PictureBox();
             this.adminPageRegisterPicture = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.viewPage = new System.Windows.Forms.TabPage();
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.adminPageTabSelector = new MaterialSkin.Controls.MaterialTabSelector();
+            this.prisonPage = new System.Windows.Forms.TabPage();
+            this.prisonerPage = new System.Windows.Forms.TabPage();
+            this.visitorPage = new System.Windows.Forms.TabPage();
+            this.settingPage = new System.Windows.Forms.TabPage();
+            this.materialCard2 = new MaterialSkin.Controls.MaterialCard();
+            this.signOutBtn = new MaterialSkin.Controls.MaterialButton();
+            this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
+            this.label1 = new System.Windows.Forms.Label();
             this.mainTabControl.SuspendLayout();
             this.adminPage.SuspendLayout();
             this.adminPageTabControl.SuspendLayout();
             this.registerPage.SuspendLayout();
-            this.registerPageLoginPanel.SuspendLayout();
-            this.viewPage.SuspendLayout();
             this.materialCard1.SuspendLayout();
+            this.registerPageLoginPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.registerImagepictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminPageRegisterPicture)).BeginInit();
+            this.viewPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.settingPage.SuspendLayout();
+            this.materialCard2.SuspendLayout();
             this.SuspendLayout();
             // 
             // mainTabControl
@@ -87,6 +94,7 @@
             this.mainTabControl.Controls.Add(this.prisonPage);
             this.mainTabControl.Controls.Add(this.prisonerPage);
             this.mainTabControl.Controls.Add(this.visitorPage);
+            this.mainTabControl.Controls.Add(this.settingPage);
             this.mainTabControl.Depth = 0;
             this.mainTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainTabControl.Location = new System.Drawing.Point(0, 0);
@@ -134,6 +142,139 @@
             this.registerPage.Text = "Register";
             this.registerPage.UseVisualStyleBackColor = true;
             // 
+            // materialCard1
+            // 
+            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard1.Controls.Add(this.materialLabel1);
+            this.materialCard1.Controls.Add(this.materialCheckbox7);
+            this.materialCard1.Controls.Add(this.materialCheckbox6);
+            this.materialCard1.Controls.Add(this.materialCheckbox5);
+            this.materialCard1.Controls.Add(this.materialCheckbox4);
+            this.materialCard1.Controls.Add(this.materialCheckbox3);
+            this.materialCard1.Controls.Add(this.materialCheckbox2);
+            this.materialCard1.Controls.Add(this.materialCheckbox1);
+            this.materialCard1.Depth = 0;
+            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard1.Location = new System.Drawing.Point(598, 17);
+            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard1.Name = "materialCard1";
+            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard1.Size = new System.Drawing.Size(283, 246);
+            this.materialCard1.TabIndex = 2;
+            // 
+            // materialLabel1
+            // 
+            this.materialLabel1.AutoSize = true;
+            this.materialLabel1.Depth = 0;
+            this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.materialLabel1.Location = new System.Drawing.Point(17, 14);
+            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel1.Name = "materialLabel1";
+            this.materialLabel1.Size = new System.Drawing.Size(80, 24);
+            this.materialLabel1.TabIndex = 1;
+            this.materialLabel1.Text = "Required";
+            this.materialLabel1.UseAccent = true;
+            // 
+            // materialCheckbox7
+            // 
+            this.materialCheckbox7.Depth = 0;
+            this.materialCheckbox7.Location = new System.Drawing.Point(14, 153);
+            this.materialCheckbox7.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox7.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox7.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox7.Name = "materialCheckbox7";
+            this.materialCheckbox7.Ripple = true;
+            this.materialCheckbox7.Size = new System.Drawing.Size(171, 37);
+            this.materialCheckbox7.TabIndex = 0;
+            this.materialCheckbox7.Text = "Confirm Password";
+            this.materialCheckbox7.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox6
+            // 
+            this.materialCheckbox6.Depth = 0;
+            this.materialCheckbox6.Location = new System.Drawing.Point(14, 190);
+            this.materialCheckbox6.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox6.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox6.Name = "materialCheckbox6";
+            this.materialCheckbox6.Ripple = true;
+            this.materialCheckbox6.Size = new System.Drawing.Size(130, 37);
+            this.materialCheckbox6.TabIndex = 0;
+            this.materialCheckbox6.Text = "Password";
+            this.materialCheckbox6.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox5
+            // 
+            this.materialCheckbox5.Depth = 0;
+            this.materialCheckbox5.Location = new System.Drawing.Point(139, 116);
+            this.materialCheckbox5.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox5.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox5.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox5.Name = "materialCheckbox5";
+            this.materialCheckbox5.Ripple = true;
+            this.materialCheckbox5.Size = new System.Drawing.Size(130, 37);
+            this.materialCheckbox5.TabIndex = 0;
+            this.materialCheckbox5.Text = "Role";
+            this.materialCheckbox5.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox4
+            // 
+            this.materialCheckbox4.Depth = 0;
+            this.materialCheckbox4.Location = new System.Drawing.Point(14, 116);
+            this.materialCheckbox4.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox4.Name = "materialCheckbox4";
+            this.materialCheckbox4.Ripple = true;
+            this.materialCheckbox4.Size = new System.Drawing.Size(130, 37);
+            this.materialCheckbox4.TabIndex = 0;
+            this.materialCheckbox4.Text = "Gender";
+            this.materialCheckbox4.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox3
+            // 
+            this.materialCheckbox3.Depth = 0;
+            this.materialCheckbox3.Location = new System.Drawing.Point(14, 80);
+            this.materialCheckbox3.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox3.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox3.Name = "materialCheckbox3";
+            this.materialCheckbox3.Ripple = true;
+            this.materialCheckbox3.Size = new System.Drawing.Size(171, 37);
+            this.materialCheckbox3.TabIndex = 0;
+            this.materialCheckbox3.Text = "Email Address";
+            this.materialCheckbox3.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox2
+            // 
+            this.materialCheckbox2.Depth = 0;
+            this.materialCheckbox2.Location = new System.Drawing.Point(144, 43);
+            this.materialCheckbox2.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox2.Name = "materialCheckbox2";
+            this.materialCheckbox2.Ripple = true;
+            this.materialCheckbox2.Size = new System.Drawing.Size(130, 37);
+            this.materialCheckbox2.TabIndex = 0;
+            this.materialCheckbox2.Text = "Last Name";
+            this.materialCheckbox2.UseVisualStyleBackColor = true;
+            // 
+            // materialCheckbox1
+            // 
+            this.materialCheckbox1.Depth = 0;
+            this.materialCheckbox1.Location = new System.Drawing.Point(14, 43);
+            this.materialCheckbox1.Margin = new System.Windows.Forms.Padding(0);
+            this.materialCheckbox1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCheckbox1.Name = "materialCheckbox1";
+            this.materialCheckbox1.Ripple = true;
+            this.materialCheckbox1.Size = new System.Drawing.Size(130, 37);
+            this.materialCheckbox1.TabIndex = 0;
+            this.materialCheckbox1.Text = "First Name";
+            this.materialCheckbox1.UseVisualStyleBackColor = true;
+            // 
             // registerPageLoginPanel
             // 
             this.registerPageLoginPanel.BackColor = System.Drawing.Color.White;
@@ -165,7 +306,7 @@
             this.showpasswordCheckBox.Name = "showpasswordCheckBox";
             this.showpasswordCheckBox.Ripple = true;
             this.showpasswordCheckBox.Size = new System.Drawing.Size(157, 37);
-            this.showpasswordCheckBox.TabIndex = 5;
+            this.showpasswordCheckBox.TabIndex = 9;
             this.showpasswordCheckBox.Text = "Show Passwords";
             this.showpasswordCheckBox.UseVisualStyleBackColor = true;
             this.showpasswordCheckBox.CheckedChanged += new System.EventHandler(this.materialCheckbox1_CheckedChanged);
@@ -183,7 +324,7 @@
             this.registerUserBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.registerUserBtn.Name = "registerUserBtn";
             this.registerUserBtn.Size = new System.Drawing.Size(200, 50);
-            this.registerUserBtn.TabIndex = 4;
+            this.registerUserBtn.TabIndex = 11;
             this.registerUserBtn.Text = "Register User";
             this.registerUserBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Outlined;
             this.registerUserBtn.UseAccentColor = true;
@@ -203,7 +344,7 @@
             this.loadImageBtn.MouseState = MaterialSkin.MouseState.HOVER;
             this.loadImageBtn.Name = "loadImageBtn";
             this.loadImageBtn.Size = new System.Drawing.Size(200, 50);
-            this.loadImageBtn.TabIndex = 4;
+            this.loadImageBtn.TabIndex = 10;
             this.loadImageBtn.Text = "Load Image";
             this.loadImageBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
             this.loadImageBtn.UseAccentColor = false;
@@ -235,7 +376,7 @@
             this.selectRole.MouseState = MaterialSkin.MouseState.OUT;
             this.selectRole.Name = "selectRole";
             this.selectRole.Size = new System.Drawing.Size(169, 49);
-            this.selectRole.TabIndex = 3;
+            this.selectRole.TabIndex = 5;
             this.selectRole.SelectionChangeCommitted += new System.EventHandler(this.selectRole_SelectionChangeCommitted);
             // 
             // selectSex
@@ -261,14 +402,14 @@
             this.selectSex.MouseState = MaterialSkin.MouseState.OUT;
             this.selectSex.Name = "selectSex";
             this.selectSex.Size = new System.Drawing.Size(169, 49);
-            this.selectSex.TabIndex = 3;
+            this.selectSex.TabIndex = 4;
             this.selectSex.SelectionChangeCommitted += new System.EventHandler(this.selectSex_SelectionChangeCommitted);
             // 
             // lastnameTextbox
             // 
             this.lastnameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lastnameTextbox.Depth = 0;
-            this.lastnameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.lastnameTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.lastnameTextbox.Hint = "Last Name";
             this.lastnameTextbox.Location = new System.Drawing.Point(390, 8);
             this.lastnameTextbox.MaxLength = 50;
@@ -284,7 +425,7 @@
             // 
             this.confirmpasswordTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.confirmpasswordTextbox.Depth = 0;
-            this.confirmpasswordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.confirmpasswordTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.confirmpasswordTextbox.Hint = "Confirm Password";
             this.confirmpasswordTextbox.Location = new System.Drawing.Point(389, 176);
             this.confirmpasswordTextbox.MaxLength = 50;
@@ -293,7 +434,7 @@
             this.confirmpasswordTextbox.Name = "confirmpasswordTextbox";
             this.confirmpasswordTextbox.Password = true;
             this.confirmpasswordTextbox.Size = new System.Drawing.Size(170, 50);
-            this.confirmpasswordTextbox.TabIndex = 2;
+            this.confirmpasswordTextbox.TabIndex = 7;
             this.confirmpasswordTextbox.Text = "";
             this.confirmpasswordTextbox.TextChanged += new System.EventHandler(this.confirmpasswordTextbox_TextChanged);
             // 
@@ -301,7 +442,7 @@
             // 
             this.passwordTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTextbox.Depth = 0;
-            this.passwordTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.passwordTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.passwordTextbox.Hint = "Password";
             this.passwordTextbox.Location = new System.Drawing.Point(214, 176);
             this.passwordTextbox.MaxLength = 50;
@@ -310,7 +451,7 @@
             this.passwordTextbox.Name = "passwordTextbox";
             this.passwordTextbox.Password = true;
             this.passwordTextbox.Size = new System.Drawing.Size(170, 50);
-            this.passwordTextbox.TabIndex = 2;
+            this.passwordTextbox.TabIndex = 6;
             this.passwordTextbox.Text = "";
             this.passwordTextbox.TextChanged += new System.EventHandler(this.passwordTextbox_TextChanged);
             // 
@@ -318,7 +459,7 @@
             // 
             this.usernameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernameTextbox.Depth = 0;
-            this.usernameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.usernameTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.usernameTextbox.Hint = "Username";
             this.usernameTextbox.Location = new System.Drawing.Point(213, 233);
             this.usernameTextbox.MaxLength = 50;
@@ -326,14 +467,14 @@
             this.usernameTextbox.Multiline = false;
             this.usernameTextbox.Name = "usernameTextbox";
             this.usernameTextbox.Size = new System.Drawing.Size(346, 50);
-            this.usernameTextbox.TabIndex = 2;
+            this.usernameTextbox.TabIndex = 8;
             this.usernameTextbox.Text = "";
             // 
             // emailTextbox
             // 
             this.emailTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.emailTextbox.Depth = 0;
-            this.emailTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.emailTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.emailTextbox.Hint = "Email Address";
             this.emailTextbox.Location = new System.Drawing.Point(214, 64);
             this.emailTextbox.MaxLength = 50;
@@ -341,7 +482,7 @@
             this.emailTextbox.Multiline = false;
             this.emailTextbox.Name = "emailTextbox";
             this.emailTextbox.Size = new System.Drawing.Size(346, 50);
-            this.emailTextbox.TabIndex = 2;
+            this.emailTextbox.TabIndex = 3;
             this.emailTextbox.Text = "";
             this.emailTextbox.TextChanged += new System.EventHandler(this.emailTextbox_TextChanged);
             // 
@@ -349,7 +490,7 @@
             // 
             this.firstnameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.firstnameTextbox.Depth = 0;
-            this.firstnameTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.firstnameTextbox.Font = new System.Drawing.Font("Roboto", 12F);
             this.firstnameTextbox.Hint = "First Name";
             this.firstnameTextbox.Location = new System.Drawing.Point(214, 8);
             this.firstnameTextbox.MaxLength = 50;
@@ -357,9 +498,31 @@
             this.firstnameTextbox.Multiline = false;
             this.firstnameTextbox.Name = "firstnameTextbox";
             this.firstnameTextbox.Size = new System.Drawing.Size(170, 50);
-            this.firstnameTextbox.TabIndex = 2;
+            this.firstnameTextbox.TabIndex = 1;
             this.firstnameTextbox.Text = "";
             this.firstnameTextbox.TextChanged += new System.EventHandler(this.firstnameTextbox_TextChanged);
+            // 
+            // registerImagepictureBox
+            // 
+            this.registerImagepictureBox.BackColor = System.Drawing.Color.White;
+            this.registerImagepictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.registerImagepictureBox.Location = new System.Drawing.Point(8, 8);
+            this.registerImagepictureBox.Name = "registerImagepictureBox";
+            this.registerImagepictureBox.Size = new System.Drawing.Size(200, 218);
+            this.registerImagepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.registerImagepictureBox.TabIndex = 1;
+            this.registerImagepictureBox.TabStop = false;
+            // 
+            // adminPageRegisterPicture
+            // 
+            this.adminPageRegisterPicture.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.adminPageRegisterPicture.Image = global::ALT_R_DB_Manager.Properties.Resources.office3;
+            this.adminPageRegisterPicture.Location = new System.Drawing.Point(3, 3);
+            this.adminPageRegisterPicture.Name = "adminPageRegisterPicture";
+            this.adminPageRegisterPicture.Size = new System.Drawing.Size(892, 397);
+            this.adminPageRegisterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.adminPageRegisterPicture.TabIndex = 0;
+            this.adminPageRegisterPicture.TabStop = false;
             // 
             // viewPage
             // 
@@ -373,12 +536,86 @@
             this.viewPage.Text = "View";
             this.viewPage.UseVisualStyleBackColor = true;
             // 
+            // materialListView1
+            // 
+            this.materialListView1.AutoSizeTable = false;
+            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader1,
+            this.columnHeader2,
+            this.columnHeader3,
+            this.columnHeader4,
+            this.columnHeader5,
+            this.columnHeader6});
+            this.materialListView1.Depth = 0;
+            this.materialListView1.FullRowSelect = true;
+            this.materialListView1.HideSelection = false;
+            this.materialListView1.Location = new System.Drawing.Point(18, 21);
+            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
+            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialListView1.Name = "materialListView1";
+            this.materialListView1.OwnerDraw = true;
+            this.materialListView1.Size = new System.Drawing.Size(442, 250);
+            this.materialListView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.materialListView1.TabIndex = 2;
+            this.materialListView1.UseCompatibleStateImageBehavior = false;
+            this.materialListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "AdminID";
+            this.columnHeader7.Width = 150;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "First Name";
+            this.columnHeader1.Width = 150;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Last Name";
+            this.columnHeader2.Width = 150;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Gender";
+            this.columnHeader3.Width = 150;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Role";
+            this.columnHeader4.Width = 150;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Email Address";
+            this.columnHeader5.Width = 150;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Username";
+            this.columnHeader6.Width = 150;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::ALT_R_DB_Manager.Properties.Resources.Material_Backgrounds_15_1366_x_768;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(892, 397);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // adminPageTabSelector
             // 
             this.adminPageTabSelector.BaseTabControl = this.adminPageTabControl;
             this.adminPageTabSelector.Depth = 0;
             this.adminPageTabSelector.Dock = System.Windows.Forms.DockStyle.Top;
-            this.adminPageTabSelector.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.adminPageTabSelector.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.adminPageTabSelector.Location = new System.Drawing.Point(3, 3);
             this.adminPageTabSelector.MouseState = MaterialSkin.MouseState.HOVER;
             this.adminPageTabSelector.Name = "adminPageTabSelector";
@@ -413,240 +650,75 @@
             this.visitorPage.Text = "Visitor";
             this.visitorPage.UseVisualStyleBackColor = true;
             // 
-            // materialCard1
+            // settingPage
             // 
-            this.materialCard1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialCard1.Controls.Add(this.materialLabel1);
-            this.materialCard1.Controls.Add(this.materialCheckbox7);
-            this.materialCard1.Controls.Add(this.materialCheckbox6);
-            this.materialCard1.Controls.Add(this.materialCheckbox5);
-            this.materialCard1.Controls.Add(this.materialCheckbox4);
-            this.materialCard1.Controls.Add(this.materialCheckbox3);
-            this.materialCard1.Controls.Add(this.materialCheckbox2);
-            this.materialCard1.Controls.Add(this.materialCheckbox1);
-            this.materialCard1.Depth = 0;
-            this.materialCard1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialCard1.Location = new System.Drawing.Point(598, 17);
-            this.materialCard1.Margin = new System.Windows.Forms.Padding(14);
-            this.materialCard1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCard1.Name = "materialCard1";
-            this.materialCard1.Padding = new System.Windows.Forms.Padding(14);
-            this.materialCard1.Size = new System.Drawing.Size(283, 246);
-            this.materialCard1.TabIndex = 2;
+            this.settingPage.Controls.Add(this.materialCard2);
+            this.settingPage.Location = new System.Drawing.Point(4, 24);
+            this.settingPage.Name = "settingPage";
+            this.settingPage.Padding = new System.Windows.Forms.Padding(3);
+            this.settingPage.Size = new System.Drawing.Size(912, 472);
+            this.settingPage.TabIndex = 4;
+            this.settingPage.Text = "Settings";
+            this.settingPage.UseVisualStyleBackColor = true;
             // 
-            // materialCheckbox1
+            // materialCard2
             // 
-            this.materialCheckbox1.Depth = 0;
-            this.materialCheckbox1.Location = new System.Drawing.Point(14, 43);
-            this.materialCheckbox1.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox1.Name = "materialCheckbox1";
-            this.materialCheckbox1.Ripple = true;
-            this.materialCheckbox1.Size = new System.Drawing.Size(130, 37);
-            this.materialCheckbox1.TabIndex = 0;
-            this.materialCheckbox1.Text = "First Name";
-            this.materialCheckbox1.UseVisualStyleBackColor = true;
+            this.materialCard2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.materialCard2.Controls.Add(this.label1);
+            this.materialCard2.Controls.Add(this.materialLabel2);
+            this.materialCard2.Controls.Add(this.signOutBtn);
+            this.materialCard2.Depth = 0;
+            this.materialCard2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialCard2.Location = new System.Drawing.Point(19, 17);
+            this.materialCard2.Margin = new System.Windows.Forms.Padding(14);
+            this.materialCard2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialCard2.Name = "materialCard2";
+            this.materialCard2.Padding = new System.Windows.Forms.Padding(14);
+            this.materialCard2.Size = new System.Drawing.Size(197, 179);
+            this.materialCard2.TabIndex = 0;
             // 
-            // materialCheckbox2
+            // signOutBtn
             // 
-            this.materialCheckbox2.Depth = 0;
-            this.materialCheckbox2.Location = new System.Drawing.Point(144, 43);
-            this.materialCheckbox2.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox2.Name = "materialCheckbox2";
-            this.materialCheckbox2.Ripple = true;
-            this.materialCheckbox2.Size = new System.Drawing.Size(130, 37);
-            this.materialCheckbox2.TabIndex = 0;
-            this.materialCheckbox2.Text = "Last Name";
-            this.materialCheckbox2.UseVisualStyleBackColor = true;
+            this.signOutBtn.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.signOutBtn.Depth = 0;
+            this.signOutBtn.DrawShadows = true;
+            this.signOutBtn.HighEmphasis = true;
+            this.signOutBtn.Icon = null;
+            this.signOutBtn.Location = new System.Drawing.Point(18, 132);
+            this.signOutBtn.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.signOutBtn.MouseState = MaterialSkin.MouseState.HOVER;
+            this.signOutBtn.Name = "signOutBtn";
+            this.signOutBtn.Size = new System.Drawing.Size(87, 36);
+            this.signOutBtn.TabIndex = 1;
+            this.signOutBtn.Text = "Sign Out";
+            this.signOutBtn.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Text;
+            this.signOutBtn.UseAccentColor = false;
+            this.signOutBtn.UseVisualStyleBackColor = true;
+            this.signOutBtn.Click += new System.EventHandler(this.signOutBtn_Click);
             // 
-            // materialCheckbox3
+            // materialLabel2
             // 
-            this.materialCheckbox3.Depth = 0;
-            this.materialCheckbox3.Location = new System.Drawing.Point(14, 80);
-            this.materialCheckbox3.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox3.Name = "materialCheckbox3";
-            this.materialCheckbox3.Ripple = true;
-            this.materialCheckbox3.Size = new System.Drawing.Size(171, 37);
-            this.materialCheckbox3.TabIndex = 0;
-            this.materialCheckbox3.Text = "Email Address";
-            this.materialCheckbox3.UseVisualStyleBackColor = true;
+            this.materialLabel2.Depth = 0;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.materialLabel2.FontType = MaterialSkin.MaterialSkinManager.fontType.Caption;
+            this.materialLabel2.Location = new System.Drawing.Point(17, 52);
+            this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel2.Name = "materialLabel2";
+            this.materialLabel2.Size = new System.Drawing.Size(163, 76);
+            this.materialLabel2.TabIndex = 2;
+            this.materialLabel2.Text = "User you are about to sign out are you sure you wish to continue?\r\nIf So please p" +
+    "ress the sign out button\r\n";
             // 
-            // materialCheckbox4
+            // label1
             // 
-            this.materialCheckbox4.Depth = 0;
-            this.materialCheckbox4.Location = new System.Drawing.Point(14, 116);
-            this.materialCheckbox4.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox4.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox4.Name = "materialCheckbox4";
-            this.materialCheckbox4.Ripple = true;
-            this.materialCheckbox4.Size = new System.Drawing.Size(130, 37);
-            this.materialCheckbox4.TabIndex = 0;
-            this.materialCheckbox4.Text = "Gender";
-            this.materialCheckbox4.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox5
-            // 
-            this.materialCheckbox5.Depth = 0;
-            this.materialCheckbox5.Location = new System.Drawing.Point(139, 116);
-            this.materialCheckbox5.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox5.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox5.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox5.Name = "materialCheckbox5";
-            this.materialCheckbox5.Ripple = true;
-            this.materialCheckbox5.Size = new System.Drawing.Size(130, 37);
-            this.materialCheckbox5.TabIndex = 0;
-            this.materialCheckbox5.Text = "Role";
-            this.materialCheckbox5.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox6
-            // 
-            this.materialCheckbox6.Depth = 0;
-            this.materialCheckbox6.Location = new System.Drawing.Point(14, 190);
-            this.materialCheckbox6.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox6.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox6.Name = "materialCheckbox6";
-            this.materialCheckbox6.Ripple = true;
-            this.materialCheckbox6.Size = new System.Drawing.Size(130, 37);
-            this.materialCheckbox6.TabIndex = 0;
-            this.materialCheckbox6.Text = "Password";
-            this.materialCheckbox6.UseVisualStyleBackColor = true;
-            // 
-            // materialCheckbox7
-            // 
-            this.materialCheckbox7.Depth = 0;
-            this.materialCheckbox7.Location = new System.Drawing.Point(14, 153);
-            this.materialCheckbox7.Margin = new System.Windows.Forms.Padding(0);
-            this.materialCheckbox7.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialCheckbox7.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialCheckbox7.Name = "materialCheckbox7";
-            this.materialCheckbox7.Ripple = true;
-            this.materialCheckbox7.Size = new System.Drawing.Size(171, 37);
-            this.materialCheckbox7.TabIndex = 0;
-            this.materialCheckbox7.Text = "Confirm Password";
-            this.materialCheckbox7.UseVisualStyleBackColor = true;
-            // 
-            // materialLabel1
-            // 
-            this.materialLabel1.AutoSize = true;
-            this.materialLabel1.Depth = 0;
-            this.materialLabel1.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.materialLabel1.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.materialLabel1.Location = new System.Drawing.Point(17, 14);
-            this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.Size = new System.Drawing.Size(80, 24);
-            this.materialLabel1.TabIndex = 1;
-            this.materialLabel1.Text = "Required";
-            this.materialLabel1.UseAccent = true;
-            // 
-            // registerImagepictureBox
-            // 
-            this.registerImagepictureBox.BackColor = System.Drawing.Color.White;
-            this.registerImagepictureBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.registerImagepictureBox.Location = new System.Drawing.Point(8, 8);
-            this.registerImagepictureBox.Name = "registerImagepictureBox";
-            this.registerImagepictureBox.Size = new System.Drawing.Size(200, 218);
-            this.registerImagepictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.registerImagepictureBox.TabIndex = 1;
-            this.registerImagepictureBox.TabStop = false;
-            // 
-            // adminPageRegisterPicture
-            // 
-            this.adminPageRegisterPicture.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.adminPageRegisterPicture.Image = global::ALT_R_DB_Manager.Properties.Resources.office3;
-            this.adminPageRegisterPicture.Location = new System.Drawing.Point(3, 3);
-            this.adminPageRegisterPicture.Name = "adminPageRegisterPicture";
-            this.adminPageRegisterPicture.Size = new System.Drawing.Size(892, 397);
-            this.adminPageRegisterPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.adminPageRegisterPicture.TabIndex = 0;
-            this.adminPageRegisterPicture.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::ALT_R_DB_Manager.Properties.Resources.Material_Backgrounds_15_1366_x_768;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(892, 397);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // materialListView1
-            // 
-            this.materialListView1.AutoSizeTable = false;
-            this.materialListView1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6});
-            this.materialListView1.Depth = 0;
-            this.materialListView1.FullRowSelect = true;
-            this.materialListView1.HideSelection = false;
-            this.materialListView1.Location = new System.Drawing.Point(18, 21);
-            this.materialListView1.MinimumSize = new System.Drawing.Size(200, 100);
-            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
-            this.materialListView1.Name = "materialListView1";
-            this.materialListView1.Size = new System.Drawing.Size(853, 100);
-            this.materialListView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
-            this.materialListView1.TabIndex = 2;
-            this.materialListView1.UseCompatibleStateImageBehavior = false;
-            this.materialListView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.DisplayIndex = 0;
-            this.columnHeader1.Text = "First Name";
-            this.columnHeader1.Width = 150;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.DisplayIndex = 1;
-            this.columnHeader2.Text = "Last Name";
-            this.columnHeader2.Width = 150;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.DisplayIndex = 2;
-            this.columnHeader3.Text = "Gender";
-            this.columnHeader3.Width = 150;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.DisplayIndex = 3;
-            this.columnHeader4.Text = "Role";
-            this.columnHeader4.Width = 150;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.DisplayIndex = 4;
-            this.columnHeader5.Text = "Email Address";
-            this.columnHeader5.Width = 150;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.DisplayIndex = 5;
-            this.columnHeader6.Text = "Username";
-            this.columnHeader6.Width = 150;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.DisplayIndex = 6;
-            this.columnHeader7.Text = "AdminID";
-            this.columnHeader7.Width = 150;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Open Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Red;
+            this.label1.Location = new System.Drawing.Point(12, 14);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 33);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "WARNING !!!";
             // 
             // DbManagementForm
             // 
@@ -665,14 +737,17 @@
             this.adminPage.ResumeLayout(false);
             this.adminPageTabControl.ResumeLayout(false);
             this.registerPage.ResumeLayout(false);
-            this.registerPageLoginPanel.ResumeLayout(false);
-            this.registerPageLoginPanel.PerformLayout();
-            this.viewPage.ResumeLayout(false);
             this.materialCard1.ResumeLayout(false);
             this.materialCard1.PerformLayout();
+            this.registerPageLoginPanel.ResumeLayout(false);
+            this.registerPageLoginPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.registerImagepictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adminPageRegisterPicture)).EndInit();
+            this.viewPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.settingPage.ResumeLayout(false);
+            this.materialCard2.ResumeLayout(false);
+            this.materialCard2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -720,5 +795,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.TabPage settingPage;
+        private MaterialSkin.Controls.MaterialCard materialCard2;
+        private System.Windows.Forms.Label label1;
+        private MaterialSkin.Controls.MaterialLabel materialLabel2;
+        private MaterialSkin.Controls.MaterialButton signOutBtn;
     }
 }
